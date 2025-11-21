@@ -5,7 +5,6 @@ export default function TaskForm({addTask}) {
     const [priority, setPriority] = useState("Medium")
     const [category, setCategory] = useState("General")
 
-
     const handlesubmit = (e)=>{
         e.preventDefault();
         addTask({text:task, priority, category, completed: false})
@@ -26,14 +25,12 @@ export default function TaskForm({addTask}) {
             {/* <h1>{task} {priority} {category}</h1> */}
         </div>
 
-
         <div id="btns">
             <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
                 <option value="High">High</option>
                 <option value="Medium">Medium</option>
                 <option value="Low">Low</option>
             </select>
-
 
             <select value={category} onChange={(e)=>setCategory(e.target.value)}>
                 <option value="General">General</option>
